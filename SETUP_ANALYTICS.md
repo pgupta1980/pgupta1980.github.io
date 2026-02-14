@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 # Setting Up Google Analytics
 
 Your blog is now configured to use Google Analytics! Follow these steps to complete the setup.
