@@ -18,6 +18,9 @@ minima:
     - { platform: twitter, user_url: "https://x.com/prasenjitgupta" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/prasenjit-gupta-3093892/" }
 
+# Google Analytics
+google_analytics: G-XXXXXXXXXX  # Replace with your GA4 measurement ID
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
