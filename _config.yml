@@ -1,0 +1,25 @@
+title: Prasenjit Gupta's Blog
+email: your-email@example.com
+description: >-
+  Exploring AI-assisted development, software engineering, and technology.
+  Sharing insights on Claude Code, best practices, and modern dev workflows.
+baseurl: ""
+url: "https://pgupta1980.github.io"
+twitter_username: prasenjitgupta
+github_username: pgupta1980
+linkedin_username: prasenjit-gupta-3093892
+
+theme: minima
+minima:
+  skin: auto
+  date_format: "%b %-d, %Y"
+  social_links:
+    - { platform: github, user_url: "https://github.com/pgupta1980" }
+    - { platform: twitter, user_url: "https://x.com/prasenjitgupta" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/prasenjit-gupta-3093892/" }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+show_excerpts: true
