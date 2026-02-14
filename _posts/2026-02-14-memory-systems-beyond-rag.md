@@ -5,6 +5,10 @@ date: 2026-02-14 18:00:00 -0000
 categories: ai llm rag memory-systems
 ---
 
+*This post was inspired by an excellent deep-dive from AI Functor: ["Memory Is All You Need: Understanding Memory & RAG Systems"](https://aifunctor.com/functor-blog/posts/understanding-memory-rag-systems.html). I'd highly recommend reading the original — it covers the full landscape with great technical depth. What follows are my own notes and takeaways from that piece, combined with lessons from my own production experience.*
+
+---
+
 I've been building RAG pipelines for the better part of two years now, and I keep running into the same wall. The demo works great. The production system doesn't. After digging through several recent papers and fighting with my own deployments, I wanted to lay out what I've learned about where vanilla RAG breaks down and what the next generation of memory-aware systems looks like.
 
 ## The RAG pipeline we all know
@@ -109,5 +113,7 @@ If you're building production systems today, here's where I've landed:
 The field is moving fast. A year ago, "just use RAG" was reasonable advice. Now it's a starting point, and the real engineering challenge is everything that comes after retrieval.
 
 ---
+
+*Inspired by: [Memory Is All You Need — AI Functor](https://aifunctor.com/functor-blog/posts/understanding-memory-rag-systems.html)*
 
 *References: Lewis et al. (2020) NeurIPS, Liu et al. (2023) arXiv:2307.03172, Yao et al. (2023) ICLR, Packer et al. (2024) arXiv:2512.13564, Zhang et al. (2025) arXiv:2510.04618, Memory-R1 arXiv:2508.19828, MAST arXiv:2503.13657*
