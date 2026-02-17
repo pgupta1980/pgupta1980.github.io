@@ -71,7 +71,7 @@ We were forcing a fundamentally new kind of computing through pipes built for an
 
 By 2025–26, the industry moved beyond single LLM calls to **agentic systems** — software that reasons over context, calls tools, maintains memory across sessions, plans multi-step actions, and makes decisions at runtime.
 
-Frameworks proliferated: LangChain (2022), AutoGen (2023), CrewAI (2024), OpenAI Agents SDK (2025), Agno (2025). Each provides primitives for building agents — tools, memory, planning, multi-agent coordination.
+Frameworks proliferated: LangChain (2022), AutoGen (2023), CrewAI (2024), OpenAI Agents SDK (2025). Each provides primitives for building agents — tools, memory, planning, multi-agent coordination.
 
 But here's what nobody's saying clearly enough:
 
@@ -212,7 +212,7 @@ In agent-native systems, governance must be **infrastructure**. When autonomous 
 - **Approval workflows** for high-stakes actions (embedded in the execution model)
 - **Guardrails** that prevent harmful actions (built into the runtime, not the application)
 
-The [Agno framework](https://github.com/agno-agi/agno) gets this right conceptually — governance and trust are part of the agent definition, not external policy files. The agent doesn't just know *what* it can do; it knows *what it's allowed* to do, and the runtime enforces the boundary.
+Several emerging frameworks are getting this right conceptually — governance and trust are part of the agent definition, not external policy files. The agent doesn't just know *what* it can do; it knows *what it's allowed* to do, and the runtime enforces the boundary.
 
 ---
 
@@ -282,8 +282,7 @@ The dominant abstraction has changed again. The question is whether we'll build 
 1. [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic, Nov 2024. Open standard for agent-tool interoperability.
 2. [Agent2Agent (A2A) Protocol](https://google.github.io/A2A) — Google, Apr 2025. Open protocol for agent-to-agent discovery and collaboration.
 3. [Deloitte Tech Trends 2026 — "The Agentic Reality Check"](https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html) — Enterprise perspective on agent-native business environments.
-4. [Ashpreet Bedi — "The Programming Language for Agentic Software"](https://x.com/i/article/2022266877070700544) — Feb 2026. The case for Agno as a language with native agentic primitives.
-5. [5 Key Trends Shaping Agentic Development in 2026](https://thenewstack.io/5-key-trends-shaping-agentic-development-in-2026/) — The New Stack, Dec 2025.
+4. [5 Key Trends Shaping Agentic Development in 2026](https://thenewstack.io/5-key-trends-shaping-agentic-development-in-2026/) — The New Stack, Dec 2025.
 6. [7 Agentic AI Trends to Watch in 2026](https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/) — Machine Learning Mastery, Jan 2026.
 7. [Agentic AI Security: A Guide for 2026](https://www.strata.io/blog/agentic-identity/8-strategies-for-ai-agent-security-in-2025/) — Strata, Jan 2026.
 8. [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) — Framework for building production agents.
