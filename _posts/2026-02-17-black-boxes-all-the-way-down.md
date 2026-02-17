@@ -246,4 +246,4 @@ But because we understand what matters.
 
 ---
 
-*This post was inspired by a conversation about the parallels between human cognitive evolution and the emergence of agentic AI systems. The first post in this series, ["From Assembly to Agents: Why Agentic AI Needs to Shed 70 Years of Software Baggage"](/2026/02/17/from-assembly-to-agents.html), explores how higher-order thinking and collective consciousness evolved from electrochemical black boxes — and what that means for the agentic software architectures we're building today.*
+*This post explores how higher-order thinking and collective consciousness evolved from electrochemical black boxes — and what that means for the agentic AI systems we're building today. The companion post in this series, ["From Assembly to Agents: Why Agentic AI Needs to Shed 70 Years of Software Baggage"](/2026/02/17/from-assembly-to-agents.html), covers the technical architecture side of this transition.*
