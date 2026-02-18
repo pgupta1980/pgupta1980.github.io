@@ -1,0 +1,91 @@
+name: Update Guestbook
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  workflow_dispatch:
+
+jobs:
+  update-guestbook:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get guestbook entries
+        id: get_entries
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const issue_number = 1;
+            
+            // Get all comments from the guestbook issue
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              per_page: 100
+            });
+            
+            // Filter for comments with 👍 reaction from repository owner
+            const approvedEntries = [];
+            for (const comment of comments) {
+              const { data: reactions } = await github.rest.reactions.listForIssueComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id
+              });
+              
+              const hasApproval = reactions.some(r => 
+                r.content === '+1' && r.user.login === context.repo.owner
+              );
+              
+              if (hasApproval) {
+                approvedEntries.push({
+                  body: comment.body.trim(),
+                  author: comment.user.login,
+                  date: comment.created_at
+                });
+              }
+            }
+            
+            // Generate markdown for guestbook
+            let guestbookContent = '# Guestbook\n\n';
+            guestbookContent += 'Leave a message by commenting on [Issue #1](../../issues/1).\n\n';
+            guestbookContent += '---\n\n';
+            
+            if (approvedEntries.length === 0) {
+              guestbookContent += '*No entries yet. Be the first!*\n';
+            } else {
+              // Reverse to show newest first
+              approvedEntries.reverse().forEach(entry => {
+                const date = new Date(entry.date).toLocaleDateString('en-US', {
+                  year: 'numeric', month: 'long', day: 'numeric'
+                });
+                guestbookContent += `## 💬 ${entry.author} — ${date}\n\n`;
+                guestbookContent += `${entry.body}\n\n`;
+                guestbookContent += `— [@${entry.author}](https://github.com/${entry.author})\n\n`;
+                guestbookContent += '---\n\n';
+              });
+            }
+            
+            fs.writeFileSync('guestbook.md', guestbookContent);
+            console.log(`Updated guestbook with ${approvedEntries.length} entries`);
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add guestbook.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "✏️ Update guestbook"
+            git push
+          fi
