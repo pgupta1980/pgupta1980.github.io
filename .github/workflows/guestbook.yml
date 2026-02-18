@@ -56,12 +56,21 @@ jobs:
             }
             
             // Generate markdown for guestbook
-            let guestbookContent = '# Guestbook\n\n';
-            guestbookContent += 'Leave a message by commenting on [Issue #1](../../issues/1).\n\n';
+            let guestbookContent = '---\n';
+            guestbookContent += 'layout: page\n';
+            guestbookContent += 'title: Guestbook\n';
+            guestbookContent += 'permalink: /guestbook/\n';
+            guestbookContent += '---\n\n';
+            guestbookContent += '# 📖 Guestbook\n\n';
+            guestbookContent += 'Welcome! This is a space for visitors to leave messages and say hello.\n\n';
+            guestbookContent += '## How to sign\n\n';
+            guestbookContent += '1. [Comment on Issue #1](https://github.com/pgupta1980/pgupta1980.github.io/issues/1) with your message  \n';
+            guestbookContent += '2. I'll approve it with a 👍 reaction  \n';
+            guestbookContent += '3. GitHub Actions automatically adds your entry below\n\n';
             guestbookContent += '---\n\n';
             
             if (approvedEntries.length === 0) {
-              guestbookContent += '*No entries yet. Be the first!*\n';
+              guestbookContent += '*No entries yet — be the first!*\n';
             } else {
               // Reverse to show newest first
               approvedEntries.reverse().forEach(entry => {
