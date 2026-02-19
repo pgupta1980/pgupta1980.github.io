@@ -23,9 +23,9 @@ Now we're building a new kind of black box. And the question nobody is asking cl
 
 ### Phase 1: The Solitary Black Box
 
-The earliest humans were, computationally speaking, standalone agents. Each brain processed sensory input, made survival decisions, and acted on the world. No shared memory. No communication protocol. No culture.
+The earliest humans were, computationally speaking, loosely connected agents. Like the primates from which we evolved, they lived in groups, cooperated for survival, and communicated through gesture, gaze, and vocalization. Each brain processed sensory input, made survival decisions, and acted on the world — but the bandwidth between minds was narrow. No symbolic language. No persistent shared memory. No way to transmit complex ideas across generations.
 
-A single human, isolated, is capable but limited — like a single AI agent running a task in isolation.
+A small group of early humans, cooperating through basic signals, was capable but limited — like a cluster of AI agents sharing a task queue but lacking a common language or long-term memory.
 
 ### Phase 2: The First Interface — Language
 
