@@ -16,7 +16,7 @@ Welcome! This is a space for visitors to leave messages and say hello.
 
 ---
 
-## 💬 pgupta1980 — February 18, 2026
+### 💬 pgupta1980 — February 18, 2026
 
 Signed! Excited to have a guestbook on my blog. 🎉✍️
 
