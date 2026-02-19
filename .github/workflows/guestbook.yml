@@ -13,7 +13,6 @@ jobs:
     permissions:
       contents: write
       issues: read
-      reactions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
