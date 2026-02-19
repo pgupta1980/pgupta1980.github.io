@@ -16,4 +16,13 @@ Welcome! This is a space for visitors to leave messages and say hello.
 
 ---
 
-*No entries yet — be the first!*
+## 💬 pgupta1980 — February 18, 2026
+
+Signed! Excited to have a guestbook on my blog. 🎉✍️
+
+— pgorc (made on behalf of the owner)
+
+— [@pgupta1980](https://github.com/pgupta1980)
+
+---
+
