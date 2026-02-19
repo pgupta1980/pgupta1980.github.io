@@ -6,7 +6,6 @@ categories: [essays, ai, philosophy, creativity]
 author: Prasenjit Gupta
 ---
 
-# Art in the Age of Agentic AI: When Machines Don't Just Create But Curate
 
 ## The Gallery at Midnight
 
