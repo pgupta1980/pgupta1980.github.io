@@ -24,7 +24,28 @@ jobs:
           script: |
             const fs = require('fs');
             const issue_number = 1;
-            
+            const MAX_ENTRY_LENGTH = 500;
+
+            // Sanitize: strip HTML tags, limit length, escape markdown
+            function sanitize(text) {
+              let s = text || '';
+              // Strip all HTML tags
+              s = s.replace(/<[^>]*>/g, '');
+              // Remove HTML entities that could be malicious
+              s = s.replace(/&(?:lt|gt|amp|quot|apos|#\d+|#x[\da-fA-F]+);?/g, '');
+              // Strip markdown headings (prevent fake page structure)
+              s = s.replace(/^#{1,6}\s+/gm, '');
+              // Strip markdown images (prevent tracking pixels / misleading images)
+              s = s.replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1');
+              // Strip raw URLs and markdown links to non-github domains
+              s = s.replace(/\[([^\]]*)\]\((?!https:\/\/github\.com\/)[^)]*\)/g, '$1');
+              // Truncate
+              if (s.length > MAX_ENTRY_LENGTH) {
+                s = s.substring(0, MAX_ENTRY_LENGTH) + '...';
+              }
+              return s.trim();
+            }
+
             // Get all comments from the guestbook issue
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
@@ -32,7 +53,7 @@ jobs:
               issue_number: issue_number,
               per_page: 100
             });
-            
+
             // Filter for comments with 👍 reaction from repository owner
             const approvedEntries = [];
             for (const comment of comments) {
@@ -41,20 +62,20 @@ jobs:
                 repo: context.repo.repo,
                 comment_id: comment.id
               });
-              
-              const hasApproval = reactions.some(r => 
+
+              const hasApproval = reactions.some(r =>
                 r.content === '+1' && r.user.login === context.repo.owner
               );
-              
+
               if (hasApproval) {
                 approvedEntries.push({
-                  body: comment.body.trim(),
-                  author: comment.user.login,
+                  body: sanitize(comment.body),
+                  author: comment.user.login.replace(/[^a-zA-Z0-9_-]/g, ''),
                   date: comment.created_at
                 });
               }
             }
-            
+
             // Generate markdown for guestbook
             let guestbookContent = '---\n';
             guestbookContent += 'layout: page\n';
@@ -68,7 +89,7 @@ jobs:
             guestbookContent += '2. I\'ll approve it with a 👍 reaction  \n';
             guestbookContent += '3. GitHub Actions automatically adds your entry below\n\n';
             guestbookContent += '---\n\n';
-            
+
             if (approvedEntries.length === 0) {
               guestbookContent += '*No entries yet — be the first!*\n';
             } else {
@@ -77,13 +98,13 @@ jobs:
                 const date = new Date(entry.date).toLocaleDateString('en-US', {
                   year: 'numeric', month: 'long', day: 'numeric'
                 });
-                guestbookContent += `## 💬 ${entry.author} — ${date}\n\n`;
+                guestbookContent += `### 💬 ${entry.author} — ${date}\n\n`;
                 guestbookContent += `${entry.body}\n\n`;
                 guestbookContent += `— [@${entry.author}](https://github.com/${entry.author})\n\n`;
                 guestbookContent += '---\n\n';
               });
             }
-            
+
             fs.writeFileSync('guestbook.md', guestbookContent);
             console.log(`Updated guestbook with ${approvedEntries.length} entries`);
 
