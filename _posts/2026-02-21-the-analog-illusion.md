@@ -68,7 +68,7 @@ If the underlying architecture is more similar than we assumed, where do humans 
 
 **Temporal experience.** Humans experience time as a river — unidirectional, irreversible, carrying everything with it. AI experiences time as discrete processing steps, each one essentially stateless (unless explicitly given memory). A human remembers last Tuesday as a *felt experience*. An AI retrieves it as data.
 
-**Integration bandwidth.** The human brain processes an estimated 11 million bits per second from sensory inputs, but conscious awareness handles only about 50 bits per second. We're massive parallel processors with a tiny conscious bottleneck. AI systems can process millions of tokens but lack the unconscious integration that gives human perception its depth — the smell of rain triggering a childhood memory triggering an emotion triggering a decision, all below the threshold of awareness.
+**Integration bandwidth.** The human brain receives a staggering flood of sensory input — early estimates put it at 11 million bits per second (Zimmerman, 1989), though modern neuroscience suggests it could be orders of magnitude higher. Yet conscious awareness processes only a tiny fraction: classical estimates suggest ~40-50 bits per second, and a 2024 Caltech study published in *Neuron* puts it even lower at ~10 bits per second. We're massive parallel processors with a tiny conscious bottleneck. AI systems can process millions of tokens but lack the unconscious integration that gives human perception its depth — the smell of rain triggering a childhood memory triggering an emotion triggering a decision, all below the threshold of awareness.
 
 ## The Collaboration Thesis
 
@@ -131,6 +131,8 @@ The question isn't whether we can understand each other. It's whether we'll be w
 6. Searle, J. "Minds, Brains, and Programs." *Behavioral and Brain Sciences* 3(3), 417-424 (1980)
 7. Bhatt, M. et al. "Dendritic and axonal analog signaling in neural circuits." *Current Biology* 16(11) (2006)
 8. Rana, F. "Digital and Analog Information Housed in DNA." *Reasons to Believe*
+9. Zimmerman, M. "The nervous system in the context of information theory." *Human Physiology*, Springer-Verlag (1989)
+10. Zheng, J. et al. "The paradoxical slowness of human behavior." *Neuron* (2024)
 
 ---
 
