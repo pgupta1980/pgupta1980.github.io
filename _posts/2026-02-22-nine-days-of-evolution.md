@@ -163,9 +163,9 @@ The model routing lesson: **never depend on a single provider**. Free tiers have
 
 ### Security Hardening
 
-Today's security audit flagged real issues: no firewall (UFW), no brute-force protection (fail2ban), SSH using default configs with password auth likely enabled, multiple ports exposed to the internet. These are on the fix list.
+Today's security audit flagged several issues — specifics can't be divulged for obvious reasons, but they're on the fix list.
 
-But the fact that we *have* a daily automated security audit catching these things? That's the system working as designed.
+The point isn't what was found — it's that we *have* a daily automated security audit catching these things. That's the system working as designed.
 
 ---
 
