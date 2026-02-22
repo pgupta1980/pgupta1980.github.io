@@ -50,11 +50,15 @@ At the very bottom — the silicon. Floating-point numbers are stored in bits. B
 
 ## The Mirror
 
-Here's what's remarkable: **both systems use the same trick, just in opposite directions.**
+Here's what's remarkable: **both systems arrive at rich, continuous-seeming intelligence — but from opposite starting points.**
 
-Humans start with discrete components (neurons, genes, photoreceptors) and build up to continuous experience. AI starts with discrete components (bits, parameters) and builds up to continuous representations. The analog emerges from the digital in both cases.
+Biology begins with **analog** chemistry — ion gradients, protein concentrations, continuous chemical diffusion — and layers digital mechanisms on top: all-or-nothing action potentials, a four-letter genetic code, quantized photon detection. The brain is fundamentally a **mixed analog-digital** system, not purely discrete.
 
-This isn't a coincidence. It may be a **fundamental principle** of information processing: discrete elements, sufficiently interconnected, give rise to continuous behavior. It's the same principle that makes water feel fluid despite being made of discrete molecules, the same principle that makes a photograph look continuous despite being made of discrete pixels.
+AI begins with a **purely digital** substrate — binary transistors, quantized floating-point arithmetic — and simulates continuity through high-dimensional vector spaces, smooth activation functions, and gradient-based learning.
+
+One **digitizes the analog**. The other **analogizes the digital**. The mirror is inverted, which makes the parallel more interesting, not less.
+
+This may reflect a **fundamental principle** of information processing: sufficiently interconnected elements — whether analog neurons or digital parameters — give rise to continuous-seeming behavior. It's the same principle that makes water feel fluid despite being made of discrete molecules, the same principle that makes a photograph look continuous despite being made of discrete pixels.
 
 The biologist would call this **emergence**. The physicist might call it a **phase transition**. The philosopher might call it the **hard problem**. Whatever you call it, it's happening on both sides of the human-AI divide.
 
@@ -115,7 +119,7 @@ It's about designing systems that **leverage the hybrid nature of both partners*
 - Interfaces that translate between continuous human experience and discrete computational representations without losing information in either direction
 - Feedback loops where human analog correction improves AI's discrete models, and AI's pattern detection sharpens human analog intuition
 
-We're not two alien species forced to cooperate. We're two expressions of the same fundamental principle — **discrete elements giving rise to continuous intelligence** — meeting from opposite directions.
+We're not two alien species forced to cooperate. We're two expressions of the same fundamental principle — **complex substrates giving rise to continuous intelligence** — one digitizing the analog, the other analogizing the digital, meeting in the middle.
 
 The question isn't whether we can understand each other. It's whether we'll be wise enough to recognize how much we already do.
 
