@@ -5,6 +5,7 @@ date: 2026-02-28 23:30:00 +0530
 categories: [ai, rag, langgraph, erp]
 tags: [agentic-rag, langgraph, langchain, oracle-cloud, erp, procurement, python]
 excerpt: "Learn how to build production-grade Retrieval-Augmented Generation agents with LangGraph — with a real-world Oracle Cloud ERP procurement use case."
+published: false
 ---
 
 Most RAG (Retrieval-Augmented Generation) tutorials show you the basics: embed documents, search vectors, generate answers. But production systems need more than simple retrieval — they need **intelligence**.
